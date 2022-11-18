@@ -1,0 +1,54 @@
+.moving-polygon {
+    width: 5rem;
+    height: 7rem;
+    background-color: aquamarine;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+
+
+    position: absolute;
+    top: 30rem;
+    left: -5rem;
+    transform: rotate(40deg,0deg);
+
+    z-index: -1;
+}
+
+
+.header-highlight::before {
+    content: "";
+    width: 50%;
+    height: .5rem;
+    background-color: aquamarine;
+
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    
+    display: block;
+   
+    animation: moveHighlightAnimation 2.2s linear;
+
+}
+
+@keyframes moveHighlightAnimation {
+    from {
+        width: 10%;
+        transform-origin: left;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+.highlight-btn svg {
+    transition: transform .8s;
+}
+
+.highlight-btn svg:hover {
+    transform: rotate(90deg);
+}
+
+.highlight-btn:hover{
+    transform: scale(1.02);
+}

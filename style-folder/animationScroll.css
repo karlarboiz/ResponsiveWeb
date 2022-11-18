@@ -1,0 +1,85 @@
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: aliceblue;
+    animation: myNavAnimation .2s linear;
+    opacity: 1;
+    height: 4rem;
+}
+
+@keyframes myNavAnimation {
+    from {
+        opacity: 0;
+        height: 7rem;
+    }
+
+    to {
+        opacity: 1;
+        height: 4rem;
+    }
+}
+
+
+.offer-move__h1 {
+    position: relative;
+    animation: mainSectionAni .5s ease-in;
+}
+
+@keyframes mainSectionAni {
+    0% {
+        left: -10rem;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0rem;
+        opacity: 1;
+    }
+}
+
+.animation-reusable {
+    position: relative;
+    animation: animationReusable 1.5s linear;
+}
+
+@keyframes animationReusable {
+    0% {
+        top: 10rem;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+/* hide class */
+.hidden {
+    opacity: 0;
+    transform: translateY(10rem);
+}
+
+.another-hidden {
+    opacity: 0;
+    height: 0rem;
+}
+
+
+/* form animation on text */
+
+.text-bottom__design {
+    animation: move 1s ease-in;
+}
+
+@keyframes move {
+    from {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
